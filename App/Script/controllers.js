@@ -1,6 +1,3 @@
-
-
-
 if (typeof __xaf_app != "undefined") {
 	var app = __xaf_app.app;
 	app.controller('landingController', function($scope, $rootScope, $localstorage, XAF) {
@@ -16,7 +13,6 @@ if (typeof __xaf_app != "undefined") {
                 timeout:2,
                 onError:messageShowError
             };
-            //__xaf_core.showMessage(opts);
             XAF.showMessage(opts);
         }
         $scope.showWarn = function(){
@@ -28,7 +24,6 @@ if (typeof __xaf_app != "undefined") {
                 timeout:2,
                 onError:messageShowError
             };
-            //__xaf_core.showMessage(opts);
             XAF.showMessage(opts);
         }
         $scope.showSuccess = function(){
@@ -40,7 +35,6 @@ if (typeof __xaf_app != "undefined") {
                 timeout:2,
                 onError:messageShowError
             };
-            //__xaf_core.showMessage(opts);
             XAF.showMessage(opts);
         }
         $scope.showSpinner = function(){
@@ -50,7 +44,6 @@ if (typeof __xaf_app != "undefined") {
                 timeout:2,
                 expiredFunc:function(){console.log('expired func')}
             };
-            //__xaf_core.showSpinner($('#spinnerTarget')[0], opts);
             XAF.showSpinner(opts, $('#spinnerTarget')[0]);
         }
         $scope.loadImageUrl = function(){
@@ -60,20 +53,11 @@ if (typeof __xaf_app != "undefined") {
             }
             $scope.showImgSuff = true;
             $scope.small = __xaf_resources.RTS_Small.url;
-            // __xaf_core.applyImage('RTS_Small', '#divImg', function(error){
-            //     console.warn(error);
-            // })
     		XAF.applyImage('RTS_Small', '#divImg', function(error){
                 console.warn(error);
             });
         }
         $scope.showModalBootStrap = function(){
-            // __xaf_core.getResource('modal_html', function(done){
-            //     $scope.title='some title';
-            //     $scope.url = done;
-            //     $(done).insertAfter("#divModalPlaceHolder");
-            //     $('#divModal').modal('show');
-            // }, messageShowError);
             XAF.showModalBootStrap('modal_html', '#divModalPlaceHolder', messageShowError);
         }
         $rootScope.ngModalCallback = function(result){
@@ -85,15 +69,11 @@ if (typeof __xaf_app != "undefined") {
         }
         $scope.makeServerCall = function(){
             var id = "-1";
-            var Header = {};
-            Header.Token = __xaf_core.getToken();
-            var DTO = { Auth: Header, Request: "GetTemplatesByID", Parameters: {ID: id} };
-            // __xaf_core.wsSend(DTO, function(done){
-            //     console.log('done.header.result', done.header.result);
-            //     console.log('done.content', done.content);
-            // }, function(error){
-            //     console.error('error', error);
-            // })
+            var Header = {Token:{}};
+            //Header.Token = __xaf_core.getToken();
+            Header.UserName = "UserName";
+            Header.Password = "password";
+            var DTO = { Auth: Header, Request: "ProcessLogin" };
             XAF.postToServer(DTO, function(done){
                 console.log('done.header.result', done.header.result);
                 console.log('done.content', done.content);

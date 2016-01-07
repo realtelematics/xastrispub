@@ -186,7 +186,7 @@ if (typeof __xaf_core == "undefined") {
         var local = {
             /*Parameter settings*/
             params:{
-                webServiceURL: "http://myurl"
+                webServiceURL: "http://xastris.com:3000/api/services"
             },
             supportRes:{
             },
