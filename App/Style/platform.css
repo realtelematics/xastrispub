@@ -1,0 +1,144 @@
+/*Name / Description  - Revision - Date Updated*/
+
+/*
+??TODO
+ */
+
+
+/* Bootstrap Overrides */
+
+.navbar {
+    margin: 0;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #265a88;
+    background-position: 0px 0px;
+}
+
+/* Realism CSS */
+
+.__xaf_content{
+    height: -webkit-calc(100vh - 50px);
+    height: -moz-calc(100vh - 50px);
+    height: calc(100vh - 50px);
+    width: 100%;
+    min-width: 100%;
+}
+
+/* Only works with separate one for each option */
+.__xaf_content:-webkit-full-screen
+{
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+.__xaf_content:-moz-full-screen
+{
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+.__xaf_content:-ms-full-screen
+{
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+.__xaf_content:-o-full-screen
+{
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+.__xaf_content:full-screen
+{
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+
+.__xaf_scrollable{
+    max-height: -webkit-calc(100vh - 100px);
+    max-height: -moz-calc(100vh - 100px);
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+}
+
+.__xaf_inverted{
+    background-color: #222;
+    color: white;
+}
+
+.__xaf_index-image{
+    width: 24px;
+}
+
+.__xaf_app-frame
+{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+
+.__xaf_index-selected{
+    background-color: #265a88;
+    background-image: webkit-linear-gradient(top, #337ab7 0%, #265a88 100%);
+    background-image: webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#265a88));
+    background-image: linear-gradient(to bottom, #337ab7 0%, #265a88 100%);
+    background-repeat: repeat-x;
+}
+
+.__xaf_header-button{
+    margin-top: 1px;
+}
+
+.__xaf_header-button-spaced{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.__xaf_glyph-std{
+    font-size: 32px;
+}
+
+.__xaf_glyph-small{
+    font-size: 16px;
+}
+
+.__xaf_glyph-alt-nav{
+    font-size: 28px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.__xaf_remove-margin{
+    margin: 0px;
+}
+
+/*  General  */
+
+body{
+    -webkit-user-select: none; /* Webkit */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE 10  */
+    -khtml-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+input,
+textarea {
+    -moz-user-select: text;
+}

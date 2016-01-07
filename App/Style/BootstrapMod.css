@@ -1,0 +1,19 @@
+/* Bootstrap Overrides */
+
+.navbar {
+     margin: 0;
+ }
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #265a88;
+    background-position: 0px 0px;
+}
+
+/* Realism CSS */
+.__xaf_content{
+    height: -webkit-calc(100vh - 51px);
+    height: -moz-calc(100vh - 51px);
+    height: calc(100vh - 51px);
+    width: 100%;
+    min-width: 100%;
+}

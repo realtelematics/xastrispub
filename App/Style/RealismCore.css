@@ -1,0 +1,15 @@
+/* General
+----------------------------------*/
+body{
+    -webkit-user-select: none; /* Webkit */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE 10  */
+    -khtml-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+input,
+textarea {
+    -moz-user-select: text;
+}

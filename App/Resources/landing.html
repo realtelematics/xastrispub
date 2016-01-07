@@ -1,0 +1,62 @@
+<style>
+button{
+	float:left;
+	width:250px;
+	height:30px;
+	margin:5px;
+}
+.form-group .help-block {
+  display: none;
+}
+
+.form-group.has-error .help-block {
+  display: block;
+}
+</style>
+<div id="divMsg" style="display:none">&nbsp;</div>
+<div id="spinnerTarget" name="spinnerTarget"></div>
+<button ng-click="showError()">Show an Error</button>
+<button ng-click="showWarn()">Show an Warning</button>
+<button ng-click="showSuccess()">Show a Success</button>
+<button ng-click="showSpinner()">Show a Spinner</button>
+<button ng-click="loadImageUrl()">Image & url from resources</button>
+<div ng-show="showImgSuff">
+	<label><B>URL:</B> {{small}}</label>
+	<img ng-src="{{small}}" style="width:8em;height:3em"/>
+	<img id="divImg" style="width:8em;height:3em"/>
+</div>
+<button ng-click="showModalBootStrap()">Show Modal Bootstrap</button>
+<button ng-click="showModalBootStrapUsingAngularScope()">Show Modal Angular Scope Callback</button>
+
+<button ng-click="makeServerCall()">Make Server API Call</button>
+<div id="divModalPlaceHolder"></div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 class="panel-title">Required form angular</h2>
+    </div>
+    <div class="panel-body">
+		<form data-toggle="validator" role="form" class="form-horizontal" name="frm">
+			<div class="form-group" show-errors>
+				<div class="col-sm-2">
+					<label class="">Required Field</label>
+				</div>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" name="requiredField" ng-model="model.required" required/>
+					<p class="help-block" ng-if="frm.requiredField.$error.required">Required</p>
+				</div>
+			</div>
+			<div class="form-group" >
+				<div class="col-sm-2">
+					<label class="">Optional Field</label>
+				</div>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" name="optionalField" ng-model="model.optional" />
+				</div>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary col-sm-2 col-sm-push-1"  ng-click="submitForm()">Save</button>
+			</div>
+		</form>
+	</div>
+</div>
